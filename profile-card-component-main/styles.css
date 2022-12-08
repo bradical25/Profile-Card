@@ -1,0 +1,173 @@
+/* ~~ Global Styles ~~ */
+:root {
+  --color-background: hsl(185, 75%, 39%);
+  --color-heading: hsl(229, 23%, 23%);
+  --color-text: hsl(227, 10%, 46%);
+
+  --font-sz-heading: 1.125rem;
+}
+
+* {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  background: var(--color-background);
+  margin: 0;
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+h1,
+h3 {
+  color: var(--color-heading);
+}
+
+h2,
+p {
+  color: var(--color-text);
+}
+
+h2 {
+  font-weight: 400;
+}
+/* ~~ Containers ~~ */
+.container {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container__background {
+  position: relative;
+}
+
+.container__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ~~ Background ~~ */
+
+.background__top,
+.background__bottom {
+  position: absolute;
+  z-index: auto;
+}
+
+.background__top {
+  bottom: 60%;
+  right: 45%;
+  height: 95%;
+  transform: rotate(-15deg);
+}
+
+.background__bottom {
+  top: 50%;
+  left: 45%;
+  height: 100%;
+}
+
+@media (min-width: 400px) {
+  .background__top {
+    bottom: 37.5%;
+    right: 52.5%;
+    height: 135%;
+    transform: rotate(15deg);
+  }
+
+  .background__bottom {
+    top: 47.5%;
+    left: 45%;
+    height: 150%;
+  }
+}
+
+/* ~~ Card ~~ */
+.card {
+  height: 23.375rem;
+  width: 100vw;
+  z-index: 1;
+  position: relative;
+
+  overflow: hidden;
+  margin: 1.5rem;
+
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 4rem -1rem var(--color-text);
+}
+
+.card__background {
+  position: absolute;
+}
+
+.card__profile {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.card__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 12.875rem;
+}
+
+@media (min-width: 399px) {
+  .card {
+    width: 21.875rem;
+  }
+}
+
+/* ~~ Content ~~ */
+.content__title {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.content__location {
+  font-size: 0.875rem;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.content__list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ~~ List ~~ */
+
+.list__body {
+  margin-top: 4px;
+  font-size: 0.625rem;
+}
+
+/* ~~ Miscellaneous ~~ */
+.profile {
+  margin: 5.25rem 0 1rem 0;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  background-color: #fff;
+}
+
+.section-break {
+  height: 1px;
+  background-color: lightgray;
+  opacity: 0.6;
+}
